@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.anusha.boxofficebaasha.MainActivity">
+    <item
+        android:id="@+id/action_loginmenu"
+        android:orderInCategory="100"
+        android:title="Login"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_logoutmenu"
+        android:orderInCategory="100"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <!--<item android:id="@+id/menu_search"
+        android:title="search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"
+        />-->
+    <item android:id="@+id/menu_sort"
+        android:title="sort"
+        android:icon="@drawable/sort_icon"
+        app:showAsAction="ifRoom">
+    <menu>
+        <item
+            android:id="@+id/sort_movie_name"
+            android:title="Movie"
+            />
+        <item
+            android:id="@+id/sort_theatre"
+            android:title="Theatre" />
+        <item
+            android:id="@+id/sort_date"
+            android:title="Show Time" />
+        <item
+            android:id="@+id/sort_ticket_count"
+            android:title="Ticket Count" />
+        <item
+            android:id="@+id/sort_posted_time"
+            android:title="Posted Time" />
+    </menu>
+    </item>
+</menu>

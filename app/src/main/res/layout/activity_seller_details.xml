@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sellerdetails_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/Base.ThemeOverlay.AppCompat.Light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/seller_ll1"
+        android:padding="10dp"
+        android:layout_below="@+id/sellerdetails_toolbar"
+        android:background="@color/colorPrimary"
+        android:weightSum="1">
+    <ImageView
+        android:id="@+id/seller_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/image"
+        />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.65"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/seller_name"
+            android:text="Seller Name"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_ll1"
+        android:id="@+id/seller_ticketdetails"
+        android:text="Ticket Details"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll1"
+        android:id="@+id/seller_ll2"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_moviename"
+            android:text="Movie Name :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:id="@+id/seller_movienamevalue"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:layout_weight="0.6"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll2"
+        android:id="@+id/seller_ll3"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_theatrename"
+            android:text="Theatre          :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_theatrenamevalue"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.6"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingPanelLoginseller"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll3"
+        android:id="@+id/seller_ll4"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_date"
+            android:text="Date                :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_datevalue"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.6"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll4"
+        android:id="@+id/seller_ll5"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_time"
+            android:text="Show Time    :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_timevalue"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.6"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll5"
+        android:id="@+id/seller_ll6"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_tickettype"
+            android:text="Ticket Type    :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_tickettypevalue"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.6"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.6"
+    android:layout_below="@+id/seller_ll6"
+    android:id="@+id/seller_ll7"
+    android:orientation="horizontal"
+    android:weightSum="1">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:id="@+id/seller_count"
+        android:text="Count              :"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:layout_weight="0.3" />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:id="@+id/seller_countvalue"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:layout_weight="0.6"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_below="@+id/seller_ll7"
+        android:id="@+id/seller_ll8"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_rate"
+            android:text="Price               :"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/seller_ratevalue"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_weight="0.6"
+            />
+    </LinearLayout>
+
+    <Button
+        android:text="Call Seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:id="@+id/seller_call" />
+
+</RelativeLayout>
